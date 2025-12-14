@@ -202,5 +202,55 @@ CREATE INDEX idx_collision_factors_collision
 CREATE INDEX idx_collisions_date_borough
     ON collisions (crash_date, borough_id);
 
+------------------------------------------------------------
+
+# Vehicle Crash Analytics (Phase 3 — Interactive Dashboard)
+
+This phase delivers an end-to-end interactive analytics dashboard built using **Streamlit**, backed by the PostgreSQL OLTP database running in Docker.
+
+The dashboard allows users to explore NYC motor vehicle collision data through filters, KPIs, charts, trends, and downloadable tables.
+
+------------------------------------------------------------
+
+## Phase 3 Features
+
+### Overview Tab
+- Total crashes
+- Total injured
+- Total killed
+- Crashes by borough (bar chart)
+
+### Top Contributing Factors
+- Displays top N contributing crash factors
+- Fully filterable by date range and borough
+
+### Trends Tab
+- Time-series trends by day
+- Metrics include:
+  - Crashes
+  - Persons Injured
+  - Persons Killed
+  - Pedestrians / Cyclists / Motorists Injured
+
+### Data Tab
+- Displays latest filtered collision records
+- CSV download functionality supported
+
+------------------------------------------------------------
+
+## Running the Project (Docker)
+
+### Prerequisites
+- Docker Desktop installed and running
+- Git installed
+
+### Steps to Run
+
+```bash
+git clone https://github.com/Nirwade/vehicle-crash-analytics-oltp.git
+cd vehicle-crash-analytics-oltp
+docker compose up -d --build
+
+
 
 
