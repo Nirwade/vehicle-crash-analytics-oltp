@@ -251,6 +251,53 @@ git clone https://github.com/Nirwade/vehicle-crash-analytics-oltp.git
 cd vehicle-crash-analytics-oltp
 docker compose up -d --build
 
+# Phase 3 — Application Layer (Interactive Dashboard)
 
+This phase delivers a complete, user-facing analytics application built using **Streamlit**, connected to the PostgreSQL OLTP database developed in Phases 1 and 2.  
+The application is fully containerized using Docker and runs end-to-end via `docker-compose`.
 
+------------------------------------------------------------
 
+## 1. Application Overview
+
+**Technology Stack**
+- Streamlit — Interactive dashboard
+- PostgreSQL — OLTP database
+- SQLAlchemy — Database connectivity
+- Docker & Docker Compose — Deployment
+
+**Key Features**
+- KPI metrics (Total Crashes, Injured, Killed)
+- Interactive date range filtering
+- Borough-level crash analysis
+- Top contributing factors visualization
+- Time-series trend analysis
+- Filtered data table with CSV download
+
+------------------------------------------------------------
+
+## 2. End-to-End Execution Flow
+
+The project runs fully end-to-end using Docker:
+
+1. PostgreSQL container starts
+2. Database schema is created
+3. ETL pipeline ingests collision data
+4. Streamlit dashboard launches automatically
+
+All components are orchestrated via `docker-compose.yml`.
+
+------------------------------------------------------------
+
+## 3. Running the Project (Docker)
+
+### Prerequisites
+- Docker Desktop installed and running
+- Git installed
+
+### Steps to Run
+
+```bash
+git clone https://github.com/Nirwade/vehicle-crash-analytics-oltp.git
+cd vehicle-crash-analytics-oltp
+docker compose up --build
