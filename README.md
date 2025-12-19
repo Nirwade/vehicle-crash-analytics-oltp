@@ -301,3 +301,15 @@ All components are orchestrated via `docker-compose.yml`.
 git clone https://github.com/Nirwade/vehicle-crash-analytics-oltp.git
 cd vehicle-crash-analytics-oltp
 docker compose up --build
+
+
+## Phase 3 — Demo Video
+
+End-to-end demo video showing:
+- Docker containers running
+- Data ingestion into PostgreSQL
+- Streamlit dashboard (Overview, Trends, Data tabs)
+- Interactive filters and visualizations
+
+Video Link:
+https://drive.google.com/file/d/1y_uECEIZOnH2ccbuEx-vMHT5UVAqoP-W/view?usp=sharing
